@@ -1,0 +1,9 @@
+*.swp
+
+dist
+local
+*.o
+*.hi
+
+notes/
+
