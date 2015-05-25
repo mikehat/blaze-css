@@ -226,6 +226,7 @@ data Value
 
 to_string :: Value -> String
 to_string (Values as)            = concat $ intersperse " " $ map to_string as
+to_string (CustomValue s)        = s
 to_string Absolute               = "absolute"
 to_string Always                 = "always"
 to_string Aqua                   = "aqua"
