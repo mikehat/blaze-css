@@ -68,12 +68,14 @@ Future directions
   becomes
 
       -- mono_font is now a module function
+      mono_font = S.fontSize (Pt 12) !  S.fontFamily Monospace $ content
+      ...
       H.span ! mono_font $ content
 
   and then
   
       -- now using a stylesheet
-      H.span ! H.cssClass "mono-font" $ content
+      mono_font = H.cssClass "mono-font" $ content
 
   as the overall page design becomes clear.
 
