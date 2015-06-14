@@ -58,6 +58,12 @@ Future directions
   far, but the benchmarks run as fast or faster on the `css` branch. There is
   no serious downside to building against that package.
 
+- This package could also support building of style element content and
+  stylesheets. This will bring the design and refactoring of web pages under
+  the same Haskell modules. For example `H.span ! S.fontSize (Pt 12) !
+  S.fontFamily Monospace $ "mono"` refactors to `H.span ! mono_font $ "mono"`
+  and then to `H.span ! H.cssClass "mono-font" $ "mono"` as the overall page
+  design becomes clear.
 
 [blaze-markup]: https://github.com/jaspervdj/blaze-markup
 [blaze-html]: https://github.com/jaspervdj/blaze-html
