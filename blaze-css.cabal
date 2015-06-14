@@ -12,12 +12,20 @@ description:
     Rendering CSS styles.
 
 library
-  hs-source-dirs:      src
-  exposed-modules:     Text.Blaze.Css21.Value, Text.Blaze.Css21.Style
-  ghc-options:         -i../blaze-markup/src
-  other-extensions:    OverloadedStrings
-  build-depends:
-    base >=4.6 && <4.7, blaze-markup >=0.7 && <0.8, text >=0.10,
-    bytestring >= 0.10
-  default-language:    Haskell2010
+    hs-source-dirs:      src
+    exposed-modules:
+        Text.Blaze.Css21.Value
+        Text.Blaze.Css21.Style
+
+    ghc-options:         
+
+    other-extensions:    OverloadedStrings
+
+    build-depends:
+          base >=4.7 && <5
+        , blaze-markup >=0.7.0.3
+        , text >=0.10
+        , bytestring >= 0.10
+
+    default-language:    Haskell2010
   

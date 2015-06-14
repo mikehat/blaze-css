@@ -6,4 +6,6 @@ local
 *.hi
 
 notes/
-
+Session.vim
+.cabal-sandbox
+cabal.sandbox.config
