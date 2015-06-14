@@ -62,18 +62,18 @@ Future directions
   stylesheets. This will bring the design and refactoring of web pages under
   the same Haskell modules. For example
 
-    -- just seeing how this looks
-    H.span ! S.fontSize (Pt 12) !  S.fontFamily Monospace $ content
+      -- just seeing how this looks
+      H.span ! S.fontSize (Pt 12) !  S.fontFamily Monospace $ content
     
   becomes
 
-    -- mono_font is now a module function
-    H.span ! mono_font $ content
+      -- mono_font is now a module function
+      H.span ! mono_font $ content
 
   and then
   
-    -- now using a stylesheet
-    H.span ! H.cssClass "mono-font" $ content
+      -- now using a stylesheet
+      H.span ! H.cssClass "mono-font" $ content
 
   as the overall page design becomes clear.
 
