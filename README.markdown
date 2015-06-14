@@ -2,10 +2,15 @@
 blaze-css
 =========
 
-CSS functionality for [blaze-markup][blaze-markup]. This is an initial hack at
-and demo of CSS style support for [blaze-markup][blaze-markup] and
-[blaze-html][blaze-html]. With some modifications to
-[blaze-markup][blaze-markup], code like this can generate valid HTML:
+CSS functionality for [blaze-markup][blaze-markup]. 
+
+Overview
+--------
+
+This is an initial hack at and demo of CSS style support for
+[blaze-markup][blaze-markup] and [blaze-html][blaze-html]. With some
+modifications to [blaze-markup][blaze-markup], code like this can generate
+valid HTML:
 
     page = do
         H.docTypeHtml $ do
@@ -34,21 +39,24 @@ use the following in your project to try this out.
 Future directions
 -----------------
 
-The `S.style-name StyleValue` pattern seems straight-forward, but another
-type-checked pattern is also possible: `S.DisplayNone` or `S.FontSizePoints
-12`. I haven't done any basic testing or benchmarking, and haven't even looked
-tried to base the library on `Data.Text` or `Data.ByteString.Builder`.
+- The `S.styleName StyleValue` pattern seems straight-forward, but another
+  type-checked pattern is also possible: `S.DisplayNone` or `S.FontSizePoints
+  12`.
 
-Then there's CSS3. That will be a moving target, but most of the types and
-functions will stay reasonably stable.
+- I haven't done any basic testing or benchmarking, and haven't even looked
+  tried to base the library on `Data.Text` or `Data.ByteString.Builder`.
 
-It might be convenient to write a `Text.Blaze.Util` module and `Makefile` entry
-to build the modules from source like [blaze-html][blaze-html] does. This will make
-building the `-moz-XXX`, `-webkit-XXX`, `-ms-XXX` ... ... modules easier.
+- Then there's CSS3. That will be a moving target, but most of the types and
+  functions will stay reasonably stable.
 
-The modifications to [blaze-markup][blaze-markup] are just a suggestion so far,
-but the benchmarks run as fast or faster on the `css` branch. There is no serious
-downside to building against that package.
+- It might be convenient to write a `Text.Blaze.Util` module and `Makefile`
+  entry to build the modules from source like [blaze-html][blaze-html] does.
+  This will make building the `-moz-XXX`, `-webkit-XXX`, `-ms-XXX` ... ...
+  modules easier.
+
+- The modifications to [blaze-markup][blaze-markup] are just a suggestion so
+  far, but the benchmarks run as fast or faster on the `css` branch. There is
+  no serious downside to building against that package.
 
 
 [blaze-markup]: https://github.com/jaspervdj/blaze-markup
